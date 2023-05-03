@@ -31,6 +31,7 @@
 </head>
 
 <body>
+  <div id="google_translate_element"></div>
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -678,6 +679,21 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Tradutor -->
+  <script type="text/javascript">
+    //Disparado como callback para ?cb=googleTranslateElementInit
+    function googleTranslateElementInit()
+    {
+        new google.translate.TranslateElement({
+            pageLanguage: 'pt', //Idioma principal da página
+            includedLanguages: 'en,es', //Idiomas que pode traduzir
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+        }, 'google_translate_element'); //google_translate_element é o elemento no div
+    }
+    </script>
+
+    <!-- Adiciona o script do tradutor -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
